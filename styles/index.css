@@ -1,0 +1,141 @@
+/*@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');*/
+
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+body{
+
+    font-family: 'Noto Sans', sans-serif;
+    /*font-family: 'Abel', sans-serif;*/
+    font-size: large;
+}
+div#about.collapse.show, div.card-body, div.col-md-6, h4, body, div.jumbotron {
+    background-color: #343a40;
+    color: white;
+    border-style: none;
+}
+
+h4 {
+    margin-top: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
+}
+
+li {
+    font-size: 1.3em;
+    font-style: oblique;
+    margin: 0 0 20px 0;
+}
+
+/*.horizontal {
+    float: left;
+    clear: none;
+    display: block;
+    padding: 0px 1em 0px 8px;
+}*/
+
+/*input[type=radio],
+input.radio {
+    float: left;
+    clear: none;
+    margin: 2px 0 0 2px;
+}*/
+
+.card-header {
+    background-color: #6e6d6a;
+    color: white;
+}
+figcaption.figure-caption {
+    color: white;
+}
+
+a:hover, a.collapsed:hover {
+    color:#f5e342;
+}
+
+a, a:link, a.btn.btn-warning {
+    color: white;
+    text-decoration: none;
+}
+a:visited {
+    color:#f5e342;
+    text-decoration: none;
+}
+a:active {
+    color:#f5e342;
+    text-decoration: none;
+}
+
+a.aLink {
+    color: #f5e342;
+}
+
+#sample2 {
+    width:420px;
+    float:right;
+
+}
+/*#secT {
+    max-height: 500px;
+    overflow: scroll;
+}*/
+
+.hidden {
+    display: none;
+}
+
+.err {
+    color: #f5e342;
+}
+
+footer {
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+
+}
+
+.card {
+    border: none;
+}
+
+.pb-5, .py-5 {
+    padding-bottom: 0rem!important;
+}
+
+input#femail.form-control {
+    width: 25em;
+}
+
+hr {
+    background-color: #ef0a9b;
+}
+
+#admin {
+    float: right;
+    border: solid white;
+    padding: 5px 5px;
+    border-radius: 5px;
+
+}
+
+
+div#customer-table_info.dataTables_info, div#testimonial-table_info.dataTables_info {
+    color: white;
+}
+
+div.container, html, table, body, label, td {
+    background-color: #ef0a9b;
+    color: white;
+    border-style: none;
+}
+
+.retroShadow {
+    color: #2c2c2c;
+    background-color: #6e6d6a;
+    letter-spacing: .05em;
+    text-shadow:
+            4px 4px 0px #ef0a9b,
+            7px 7px 0px rgba(0, 0, 0, 0.2);
+}

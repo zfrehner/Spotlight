@@ -1,0 +1,45 @@
+
+
+#sample2 {
+    width:420px;
+    float:right;
+
+}
+#secT {
+    max-height: 500px;
+    overflow: scroll;
+}
+#cool {
+    background: -webkit-linear-gradient(#ffc107, grey);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h1, h3 {
+    color: #ffc107;
+    font-style: oblique;
+    padding-top: 50px;
+}
+#confirmBody {
+    background-color: slategrey;
+}
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%; /*we can make this whatever size we want that looks good*/
+}
+
+.btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    text-align: center;
+    color: white;
+    margin-top: 25px;
+
+}
+button.btn.btn-warning:hover {
+    color: black;
+    text-decoration: none;
+}
