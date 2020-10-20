@@ -13,6 +13,7 @@
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
             crossorigin="anonymous">
     </script> <!--jquery component-->
+    <script src="script/jqueryAjax.js"></script>
 
     <link rel="icon" type="image/png" href="images/spotlightLogo.png">
     <title>Spotlight</title>
@@ -227,6 +228,79 @@
                             </div>
                         </div>
                     </div><!-- cards ends here -->
+                    <div class="row">
+                        <!--gym 1 display-->
+                        <div class="col-sm">
+                            <label for="gym1">Gym1</label>
+                            <div class="overflow-auto" id="gym1">
+                                <?php
+                                $sql1 = "SELECT * FROM gym1 ";
+                                $result1 = mysqli_query($cnxn, $sql1);
+                                if (mysqli_num_rows($result1) > 0) {
+                                    while ($row = mysqli_fetch_assoc($result1)) {
+                                        echo "<p>";
+                                        echo $row['first']." ".$row['last'].", (".$row['gender'].") ".$row['age']." ";
+                                        echo "<br>";
+                                        echo $row['city']. ", ". $row['state']." [";
+                                        echo $row['comment']."] ";
+                                        echo "</p>";
+                                    }
+                                } else {
+                                    echo "No one has checked in";
+                                }
+                                ?>
+
+                            </div>
+                        </div>
+
+                        <!--gym 2 display-->
+                        <div class="col-sm">
+                            <label for="gym2">Gym2</label>
+                            <div class="overflow-auto" id="gym2">
+                                <?php
+                                $sql2 = "SELECT * FROM gym2 ";
+                                $result2 = mysqli_query($cnxn, $sql2);
+                                if (mysqli_num_rows($result2) > 0) {
+                                    while ($row = mysqli_fetch_assoc($result2)) {
+                                        echo "<p>";
+                                        echo $row['first']." ".$row['last'].", (".$row['gender'].") ".$row['age']." ";
+                                        echo "<br>";
+                                        echo $row['city']. ", ". $row['state']." [";
+                                        echo $row['comment']."] ";
+                                        echo "</p>";
+                                    }
+                                } else {
+                                    echo "No one has checked in";
+                                }
+                                ?>
+                            </div>
+                        </div>
+
+                        <!--gym 3 display-->
+                        <div class="col-sm">
+                            <label for="gym3">Gym3</label>
+                            <div class="overflow-auto" id="gym3">
+                                <?php
+                                $sql3 = "SELECT * FROM gym3 ";
+                                $result3 = mysqli_query($cnxn, $sql3);
+                                if (mysqli_num_rows($result3) > 0) {
+                                    while ($row = mysqli_fetch_assoc($result3)) {
+                                        echo "<p>";
+                                        echo $row['first']." ".$row['last'].", (".$row['gender'].") ".$row['age']." ";
+                                        echo "<br>";
+                                        echo $row['city']. ", ". $row['state']." [";
+                                        echo $row['comment']."] ";
+                                        echo "</p>";
+                                    }
+                                } else {
+                                    echo "No one has checked in";
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <button id="refresh">Refresh</button>
 
                 </div><!-- card body content ends-->
             </div><!-- card collapse -->
@@ -375,8 +449,9 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> <!--bootstrap component-->
+<script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> <!--bootstrap component-->
+<script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script> <!--data tables component-->
 <script src="https://kit.fontawesome.com/adf6e350ab.js" crossorigin="anonymous"></script>
 
 <script src="script/validation.js"></script>
