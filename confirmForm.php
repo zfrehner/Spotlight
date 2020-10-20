@@ -23,12 +23,13 @@
 <pre>
 <?php
 //turn on error reporting
-/*ini_set('display_errors', 1);
-error_reporting(E_ALL);*/
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
 require('validateFunctions.php'); //requires the validation file to be used
 
-require('/home/nception/daySideDB.php');
+//Connect to db
+require('/home/jonlaygo/db.php');
 
 $isValid = true; // setting up a new variable and initializing it to true
 
@@ -51,28 +52,28 @@ else {
     $isValid = false;
 }
 
-if(!validEmail(trim($_POST['femail']))) {
-    echo "<p>Invalid email address.</p>";
+if(!validAge(trim($_POST['age']))) {
+    echo "<p>Invalid age.</p>";
     $isValid = false;
 }
 else {
-    $femail = trim($_POST['femail']);
+    $age = trim($_POST['age']);
 }
 
-if (validPhone(trim($_POST['fphone'])) == true) {
-    $fphone = trim($_POST['fphone']);
+if (validGender(trim($_POST['gender'])) == true) {
+    $gender = trim($_POST['gender']);
 } else {
-    echo "Invalid phone number";
+    echo "Invalid gender";
     $isValid = false;
 }
 
-$mailingList = $_POST['mailing-list-short'];
-if(isset($mailingList) != "yes") {
-    $mailingList = "no";
+if (validGym(trim($_POST['gym'])) == true) {
+    $gym = trim($_POST['gym']);
+} else {
+    echo "Invalid gym";
+    $isValid = false;
 }
-else {
-    $mailingList = "yes";
-}
+
 
 $note = trim($_POST['note']);
 if(empty($note)==true) {
@@ -84,32 +85,6 @@ else {
     $isValid = true;
 }
 
-//$ffname = $_POST['ffname'];
-//$flname = $_POST['flname'];
-//$femail = $_POST['femail'];
-//$fphone = $_POST['fphone'];
-
-if($isValid) {
-
-    $link = "https://nception.greenriverdev.com/test.html";
-    $message2 = "Thank you for signing up DaySide LLC. To unsubscribe, please respond to this email with \"Unsubscribe\". 
-    To request more information, click on the link ". " ". $link;
-    $message = "Hello, " . $ffname . " " . $flname . " has signed up for your mailing list. Their email is " . $femail . " and their phone number is " . $fphone. " and ".
-        "Mailing list sign up is: ". $mailingList. "The note to you is: ". $note;
-
-    $toAddress = "zfrehner@mail.greenriver.edu";
-    $subject = "Spotlight Member";
-    $header = "New member Alert!";
-
-    //sends email to Owner
-    mail($toAddress, $subject, $message, $header);
-
-    //sends email to subscriber
-
-    mail($femail, $subject, $message2, $header );
-
-}
-
 /*SQL side----------------------------------------------------------------------------------------------------------*/
 if(!$isValid) {
     die("Please click back and try again");
@@ -117,23 +92,24 @@ if(!$isValid) {
 
 $firstName = mysqli_real_escape_string($cnxn, $_POST['ffname']);
 $lastName = mysqli_real_escape_string($cnxn, $_POST['flname']);
-$fphone = mysqli_real_escape_string($cnxn, $_POST['fphone']);
-$femail = mysqli_real_escape_string($cnxn, $_POST['femail']);
-$mailList = mysqli_real_escape_string($cnxn, $_POST['mailing-list-short']);
+$age = mysqli_real_escape_string($cnxn, $_POST['age']);
+$gender = mysqli_real_escape_string($cnxn, $_POST['gender']);
+$gym = mysqli_real_escape_string($cnxn, $_POST['gym']); /* not included in sql insert query*/
+$note = mysqli_real_escape_string($cnxn, $_POST['note']);
 
 //Write an SQL statement
-$sql = "INSERT INTO `customer` 
-        (`ID`, `f_name`, `email`, `phone`, `l_name`, `title`, `company`, `mailing_list`) 
-        VALUES(NULL, '$firstName', '$femail', '$fphone', '$lastName', NULL, NULL, '$mailList');";
+$sql = "INSERT INTO `gym1` 
+        (`ID`, `first`, `last`, `gender`, `age`, `city`, `state`, `comment`) 
+        VALUES(NULL, '$firstName', '$lastName', '$gender', '$age', NULL, NULL, '$note');";
 
 //Send the query to the database
 $result = mysqli_query($cnxn, $sql);
 //Print a confirmation
-/*if ($result) {
+if ($result) {
     echo "TESTING: DATA SUCCESSFULLY ADDED!";
-}*/
+}
 
-/*var_dump($_POST);*/
+var_dump($_POST);
 
 
 ?>
