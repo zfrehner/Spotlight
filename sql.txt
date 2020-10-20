@@ -43,3 +43,8 @@
 // inserting values
     insert into gym1 (first, last, gender, age, city, state, comment)
     values ('jane', 'doe', 'f', '25', 'auburn', 'california', 'bis and back');
+
+// inserting values query in php
+    $sql = "INSERT INTO `gym1` // changeable table name
+        (`ID`, `first`, `last`, `gender`, `age`, `city`, `state`, `comment`)
+        VALUES(NULL, '$firstName', '$lastName', '$gender', '$age', NULL, NULL, '$note');";
