@@ -16,6 +16,33 @@ function validEmail($email) {
         ? FALSE : TRUE;
 }
 
+function validAge($age) {
+    if($age < 13) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function validGender($gender) {
+    if(empty($gender)) {
+        return false;
+    }
+    else {
+        return $gender == "m" || $gender == "M" || $gender == "f"
+            || $gender == "F";
+    }
+}
+
+function validGym($gym) {
+    if(empty($gym)) {
+        return false;
+    }
+    else {
+        return $gym == "gym1" || $gym == "gym2" || $gym == "gym3";
+    }
+}
+
 function validPhone($phone)
 {
     // Allow +, - and . in phone number

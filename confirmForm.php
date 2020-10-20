@@ -52,12 +52,11 @@ else {
     $isValid = false;
 }
 
-if(!validAge(trim($_POST['age']))) {
+if(!validAge($_POST['age'])) {
     echo "<p>Invalid age.</p>";
     $isValid = false;
-}
-else {
-    $age = trim($_POST['age']);
+} else {
+    $age = $_POST['age'];
 }
 
 if (validGender(trim($_POST['gender'])) == true) {
@@ -73,7 +72,6 @@ if (validGym(trim($_POST['gym'])) == true) {
     echo "Invalid gym";
     $isValid = false;
 }
-
 
 $note = trim($_POST['note']);
 if(empty($note)==true) {
@@ -98,9 +96,23 @@ $gym = mysqli_real_escape_string($cnxn, $_POST['gym']); /* not included in sql i
 $note = mysqli_real_escape_string($cnxn, $_POST['note']);
 
 //Write an SQL statement
-$sql = "INSERT INTO `gym1` 
+if($_POST['gym'] == "gym1") {
+    $sql = "INSERT INTO `gym1` 
         (`ID`, `first`, `last`, `gender`, `age`, `city`, `state`, `comment`) 
         VALUES(NULL, '$firstName', '$lastName', '$gender', '$age', NULL, NULL, '$note');";
+}
+
+if($_POST['gym'] == "gym2") {
+    $sql = "INSERT INTO `gym2` 
+        (`ID`, `first`, `last`, `gender`, `age`, `city`, `state`, `comment`) 
+        VALUES(NULL, '$firstName', '$lastName', '$gender', '$age', NULL, NULL, '$note');";
+}
+
+if($_POST['gym'] == "gym3"){
+    $sql = "INSERT INTO `gym3` 
+        (`ID`, `first`, `last`, `gender`, `age`, `city`, `state`, `comment`) 
+        VALUES(NULL, '$firstName', '$lastName', '$gender', '$age', NULL, NULL, '$note');";
+}
 
 //Send the query to the database
 $result = mysqli_query($cnxn, $sql);
