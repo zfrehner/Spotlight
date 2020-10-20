@@ -9,18 +9,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<<<<<<< HEAD
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
             crossorigin="anonymous">
     </script> <!--jquery component-->
 
-=======
->>>>>>> c17ef9eb5b30b0136bb9e2b11214130403fc29c1
     <link rel="icon" type="image/png" href="images/spotlightLogo.png">
     <title>Spotlight</title>
 
 </head>
+
 <body class="bg-dark">
 <!--<h1 class = "retroShadow">SPOTLIGHT</h1>-->
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top position-sticky"><!-- overall navbar-->
@@ -264,14 +262,8 @@
                                         <a id="contactHere"></a>
                                         <div class="row mt-5">
                                             <div class="col-md-6">
-<<<<<<< HEAD
                                                 <h3>Check-IN Now!</h3>
                                                 <fieldset class="form-group">
-=======
-                                                <h5>Let us know which gym you are attending.</h5>
-                                                <fieldset class="form-group">
-                                                    <legend>Check-in</legend>
->>>>>>> c17ef9eb5b30b0136bb9e2b11214130403fc29c1
                                                     <div class="form-group">
                                                         <input type="text"
                                                                class="form-control w-50 mx-auto"
@@ -296,16 +288,11 @@
                                                                placeholder="Age"
                                                                id="age"
                                                                name="age">
-<<<<<<< HEAD
                                                         <span class="hidden" id="errAge">&#9888; Please enter age *Must be 13 or older*.</span>
-=======
-                                                        <span class="hidden" id="errAge">&#9888; Please enter your age.</span>
->>>>>>> c17ef9eb5b30b0136bb9e2b11214130403fc29c1
                                                     </div>
 
                                                     <!--gender-->
                                                     <div class="form-group">
-<<<<<<< HEAD
                                                         <legend>Gender</legend>
                                                         <select class="form-control w-50 mx-auto" id="gender" name="gender">
                                                             <option value="0">-Please select-</option>
@@ -330,53 +317,6 @@
                                                         <label for="note">Workout plan today? (optional)</label>
                                                         <textarea class="form-control w-50 mx-auto" id="note" name="note" rows="3"></textarea>
                                                     </div>
-=======
-                                                        <input type="text"
-                                                               class="form-control w-50 mx-auto"
-                                                               placeholder="Gender (Male/Female)"
-                                                               id="gender"
-                                                               name="gender">
-                                                        <span class="hidden" id="errGender">&#9888; Please enter your gender.</span>
-                                                    </div>
-
-                                                    <!--<div class="form-group">
-                                                        <input type="tel"
-                                                               class="form-control w-50 mx-auto"
-                                                               placeholder="Phone Number"
-                                                               id="fphone"
-                                                               name="fphone">
-                                                        <span class="hidden" id="errfPhone">&#9888; Please Enter a phone number.  Eg: 123-456-7890</span>
-                                                    </div>-->
-
-                                                    <div class="form-group">
-                                                        <input type="text"
-                                                               class="form-control w-50 mx-auto"
-                                                               placeholder="EMAIL"
-                                                               id="femail"
-                                                               name="femail">
-                                                        <span class="hidden" id="errfEmail">&#9888; Please Enter a Valid Email.  Eg: you@example.com</span>
-                                                    </div>
-
-                                                    <fieldset class="form-group">
-                                                        <legend>Select A Gym</legend>
-                                                        <select class="form-control w-50 mx-auto" id="gym" name="gym">
-                                                            <option value="none">-Please select-</option>
-                                                            <option value="gym1">Roxy's Fitness for All</option>
-                                                            <option value="gym2">LA Fitness - 1347 Auburn Way N · Auburn North</option>
-                                                            <option value="gym3">Peak MMA & Fitness LLC</option>
-
-                                                        </select>
-                                                        <span class="hidden" id="errIndustry">&#9888; Please choose an option.</span>
-                                                    </fieldset>
-                                                    <div class="form-group">
-                                                        <label for="note">Please enter you planned workout for today.</label>
-                                                        <textarea class="form-control w-50 mx-auto" id="note" name="note" rows="3"></textarea>
-                                                    </div>
-                                                    <div class="form-group form-check">
-                                                        <input type="checkbox" class="form-check-input" id="mailing-list-short" name="mailing-list-short" value="yes" checked>
-                                                        <label class="form-check-label" for="mailing-list">Please add me to your mailing list.</label><br>
-                                                    </div>
->>>>>>> c17ef9eb5b30b0136bb9e2b11214130403fc29c1
 
                                                     <button id="btn-subscribe" type="submit" class="btn btn-warning">Check-in</button>
                                                 </fieldset>
@@ -434,20 +374,11 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<<<<<<< HEAD
 <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
-=======
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
->>>>>>> c17ef9eb5b30b0136bb9e2b11214130403fc29c1
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/adf6e350ab.js" crossorigin="anonymous"></script>
 
-<<<<<<< HEAD
 <script src="script/validation.js"></script>
-=======
-<script src="scripts/validation.js"></script>
-<script src="scripts/shortValidation.js"></script>
->>>>>>> c17ef9eb5b30b0136bb9e2b11214130403fc29c1
 </body>
 </html>
