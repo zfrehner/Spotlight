@@ -1,0 +1,45 @@
+// mysql code for skateboard
+
+// creating the data tables
+// gym 1
+    CREATE TABLE gym1 (
+    	id int(11) not null AUTO_INCREMENT PRIMARY KEY,
+        first varchar(20) not null,
+        last varchar(20) not null,
+        gender char(1),
+        age int(3) not null,
+        city varchar(20),
+        state varchar(20),
+        comment text,
+        time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+
+// gym 2
+    CREATE TABLE gym2 (
+     	id int(11) not null AUTO_INCREMENT PRIMARY KEY,
+         first varchar(20) not null,
+         last varchar(20) not null,
+         gender char(1),
+         age int(3) not null,
+         city varchar(20),
+         state varchar(20),
+         comment text,
+         time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+     );
+
+// gym 3
+    CREATE TABLE gym3 (
+    	id int(11) not null AUTO_INCREMENT PRIMARY KEY,
+        first varchar(20) not null,
+        last varchar(20) not null,
+        gender char(1),
+        age int(3) not null,
+        city varchar(20),
+        state varchar(20),
+        comment text,
+        time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+
+// inserting values
+    insert into gym1 (first, last, gender, age, city, state, comment)
+    values ('jane', 'doe', 'f', '25', 'auburn', 'california', 'bis and back');
