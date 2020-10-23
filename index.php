@@ -32,11 +32,11 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <a href="#about" class="navbar-brand">SPOTLIGHT</a><!-- navbar heading-->
+        <a href="#logo" class="navbar-brand">SPOTLIGHT</a><!-- navbar heading-->
 
-        <a href="#testimonial"><button class="nav-item nav-link btn btn-warning"
+        <!--<a href="#testimonial"><button class="nav-item nav-link btn btn-warning"
                                        data-target="#contactHere"
-                                       id="contactUs" >  Check-in</button></a>
+                                       id="contactUs" >  Check-in</button></a>-->
 
         <div class="collapse navbar-collapse" id="myTogglerNav"><!-- navbar collapsing menu-->
             <div class="navbar-nav">
@@ -47,19 +47,15 @@
                    aria-controls="about">ABOUT</a><!-- navlink about-->
 
                 <div class="nav-item nav-link">
-                    <a  href="#dayServices"
+                    <a  href="#img6"
                         data-target="#"
-                        class="collapsed"
-                        data-toggle="collapse"
+
                         aria-expanded="false"
                         aria-controls="dayServices">SEE WHO'S AT THE GYM!</a> <!-- navlink services-->
                 </div>
 
                 <div class="nav-item nav-link">
-                    <a  href="#testimonial"
-                        data-target=""
-                        class="collapsed"
-                        data-toggle="collapse"
+                    <a  href="#contactHere"
                         aria-expanded="false">CHECK-IN</a> <!--navlink testimonials-->
                 </div>
 
@@ -77,7 +73,7 @@
             <div class="col-md-6 ">
                 <div class="card-body">
                     <div class="card-title display-2 img-fluid">
-                        <h1><em><strong>SPOTLIGHT</strong></em></h1>
+                        <h1 id="logo"><em><strong>SPOTLIGHT</strong></em></h1>
                         <div class="text-center">
                         <img src="images/spotlightLogo (2).png" alt="logo"><!--image by carousel-->
                         </div>
@@ -202,8 +198,9 @@
                     </p>
 
                     <div class="card-deck"><!-- double cards starts here -->
+
                         <div class="card"><!-- card one -->
-                            <img class="card-img-top" src="images/gym2.jpg" alt="sample4">
+                            <img class="card-img-top" src="images/gym4.jpg" alt="sample4" id="img4">
                             <div class="card-body">
                                 <h5 class="card-title">Roxy's Fitness for All - 31446 52nd Ave S</h5>
                                 <div class="card-text">
@@ -218,16 +215,18 @@
                                 </div>
                                 <p class="card-text"><small class="text-muted">Last updated 10/19/2020</small></p>
                             </div>
-                        </div><!-- card one ends here -->
+                       <!-- </div>--><!-- card one ends here -->
 
-                        <div class="card"><!-- card two starts here -->
-                            <img class="card-img-top" src="images/gym3.jpg" alt="sample3">
+
+
+                        <!--<div class="card">--><!-- card two starts here -->
+                            <img class="card-img-top" src="images/gym5.jpg" alt="sample3">
                             <div class="card-body">
                                 <h5 class="card-title">LA Fitness - 1347 Auburn Way N · Auburn North</h5>
                                 <br>
                                 <!--gym 2 display-->
                                 <div class="col-sm">
-                                    <label for="gym2">LA Fitness - 1347 Auburn Way N · Auburn North</label>
+                                    <!--<label for="gym2">LA Fitness - 1347 Auburn Way N · Auburn North</label>-->
                                     <div class="overflow-auto" id="gym2">
                                         <!--This is the div for the table to display into-->
                                     </div>
@@ -236,13 +235,16 @@
                                 <p class="card-text"><small class="text-muted">Last updated 10/19/2020</small></p>
                             </div>
 
-                            <img class="card-img-top" src="images/gym4.jpg" alt="sample3">
+
+
+
+                            <img class="card-img-top" src="images/gym6.jpg" alt="sample3" id="img6">
                             <div class="card-body">
-                                <h5 class="card-title">Peak MMA & Fitness LLC - 328 37th St NW suite A</h5>
+                                <h5 class="card-title" id="showButton">Peak MMA & Fitness LLC - 328 37th St NW suite A</h5>
                                 <br>
                                 <!--gym 3 display-->
                                 <div class="col-sm">
-                                    <label for="gym3">Peak MMA & Fitness LLC - 328 37th St NW suite A</label>
+                                    <!--<label for="gym3">Peak MMA & Fitness LLC - 328 37th St NW suite A</label>-->
                                     <div class="overflow-auto" id="gym3">
                                         <!--This is the div for the table to display into-->
                                     </div>
@@ -252,6 +254,7 @@
                             </div>
                         </div>
                     </div><!-- cards ends here -->
+
                     <br>
                     <button id="refresh">See Who's at the Gym!</button>
 
@@ -351,7 +354,7 @@
 
                                             <div class="col-md-6">
                                                 <br>
-                                                <img class="card-img-top" src="images/gym4.jpg" alt="sample4">
+                                                <img class="card-img-top" src="images/gym3.jpg" alt="sample4">
                                             </div>
                                         </div>
                                     </form>
