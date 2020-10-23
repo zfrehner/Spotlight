@@ -77,8 +77,10 @@
             <div class="col-md-6 ">
                 <div class="card-body">
                     <div class="card-title display-2 img-fluid">
-                        <h1><em>SPOTLIGHT</em></h1>
+                        <h1><em><strong>SPOTLIGHT</strong></em></h1>
+                        <div class="text-center">
                         <img src="images/spotlightLogo (2).png" alt="logo"><!--image by carousel-->
+                        </div>
                     </div>
                 </div>
             </div>
