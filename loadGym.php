@@ -1,8 +1,19 @@
 <?php
 //Connect to db
 require('/home/jonlaygo/db.php');
+?>
+<table id="gym1-table">
+    <thead>
+    <tr>
+        <th>First</th>
+        <th>Last</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Workout</th>
+    </tr>
+    </thead>
 
-
+<?php
 $sql1 = "SELECT * FROM gym1 ";
 $result1 = mysqli_query($cnxn, $sql1);
 if (mysqli_num_rows($result1) > 0) {
@@ -26,7 +37,13 @@ if (mysqli_num_rows($result1) > 0) {
     echo "The data table will display here";
 }
 ?>
+</table>
 
+<script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script> <!--data tables component-->
+
+<script>
+    $('#gym1-table').DataTable();
+</script>
 <!--while ($row = mysqli_fetch_assoc($result1)) {
 echo "<p>";
     echo $row['first']." ".$row['last'].", (".$row['gender'].") ".$row['age']." ";
