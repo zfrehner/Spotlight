@@ -209,10 +209,9 @@
                                 <div class="card-text">
                                     <!--gym 1 display-->
                                     <div class="col-sm">
-                                        <label for="gym1">Roxy's Fitness for All - 31446 52nd Ave S</label>
+                                        <!--<label for="gym1">Roxy's Fitness for All - 31446 52nd Ave S</label>-->
                                         <div class="" id="gym1">
-
-
+                                            <!--This is the div for the table to display into-->
                                         </div>
                                     </div>
 
@@ -230,21 +229,7 @@
                                 <div class="col-sm">
                                     <label for="gym2">LA Fitness - 1347 Auburn Way N · Auburn North</label>
                                     <div class="overflow-auto" id="gym2">
-                                        <?php
-                                        $sql2 = "SELECT * FROM gym2 ";
-                                        $result2 = mysqli_query($cnxn, $sql2);
-                                        if (mysqli_num_rows($result2) > 0) {
-                                            while ($row = mysqli_fetch_assoc($result2)) {
-                                                echo "<p>";
-                                                echo $row['first']." ".$row['last'].", (".$row['gender'].") ".$row['age']." ";
-                                                echo "<br>";
-                                                echo $row['comment']."] ";
-                                                echo "</p>";
-                                            }
-                                        } else {
-                                            echo "The data table will display here.";
-                                        }
-                                        ?>
+                                        <!--This is the div for the table to display into-->
                                     </div>
                                 </div>
 
@@ -259,21 +244,7 @@
                                 <div class="col-sm">
                                     <label for="gym3">Peak MMA & Fitness LLC - 328 37th St NW suite A</label>
                                     <div class="overflow-auto" id="gym3">
-                                        <?php
-                                        $sql3 = "SELECT * FROM gym3 ";
-                                        $result3 = mysqli_query($cnxn, $sql3);
-                                        if (mysqli_num_rows($result3) > 0) {
-                                            while ($row = mysqli_fetch_assoc($result3)) {
-                                                echo "<p>";
-                                                echo $row['first']." ".$row['last'].", (".$row['gender'].") ".$row['age']." ";
-                                                echo "<br>";
-                                                echo $row['comment']."] ";
-                                                echo "</p>";
-                                            }
-                                        } else {
-                                            echo "The data table will display here.";
-                                        }
-                                        ?>
+                                        <!--This is the div for the table to display into-->
                                     </div>
                                 </div>
 
