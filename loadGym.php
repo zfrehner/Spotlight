@@ -5,8 +5,7 @@ require('/home/jonlaygo/db.php');
 <table id="gym1-table">
     <thead>
     <tr>
-        <th>First</th>
-        <th>Last</th>
+        <th>Name</th>
         <th>Gender</th>
         <th>Age</th>
         <th>Workout</th>

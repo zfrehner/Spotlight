@@ -210,44 +210,9 @@
                                     <!--gym 1 display-->
                                     <div class="col-sm">
                                         <label for="gym1">Roxy's Fitness for All - 31446 52nd Ave S</label>
-                                        <div class="overflow-auto" id="gym1">
+                                        <div class="" id="gym1">
 
-                                            <table id="gym1-table">
-                                                <thead>
-                                                <tr>
-                                                    <th>First</th>
-                                                    <th>Last</th>
-                                                    <th>Gender</th>
-                                                    <th>Age</th>
-                                                    <th>Workout</th>
-                                                </tr>
-                                                </thead>
 
-                                                <?php
-                                            $sql1 = "SELECT * FROM gym1 ";
-                                            $result1 = mysqli_query($cnxn, $sql1);
-                                            if (mysqli_num_rows($result1) > 0) {
-                                                //process the result
-                                                foreach($result1 as $row) {
-                                                    //var_dump($row);
-                                                    $first = $row['first'];
-                                                    $last = $row['last'];
-                                                    $gender = $row['gender'];
-                                                    $age = $row['age'];
-                                                    $comment = $row['comment'];
-
-                                                    echo "<tr>            
-                                                    <td>$first $last</td>
-                                                    <td>$gender</td>
-                                                    <td>$age</td>
-                                                    <td>$comment</td>
-                                                    </tr>";
-                                                }
-                                            } else {
-                                                echo "The data table will display here";
-                                            }
-                                            ?>
-                                            </table>
                                         </div>
                                     </div>
 
