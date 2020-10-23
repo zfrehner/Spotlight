@@ -19,7 +19,7 @@ h4 {
 
 h1 {
     text-align: center;
-    font-size: 100px;
+    font-size: 50px;
 }
 
 li {
@@ -132,10 +132,10 @@ div.container, html, table, body, label, td {
 }
 
 .retroShadow {
-    color: #2c2c2c;
-    background-color: #6e6d6a;
+    color: white;
+    background-color: #343a40;
     letter-spacing: .05em;
     text-shadow:
-            4px 4px 0px #ef0a9b,
-            7px 7px 0px rgba(0, 0, 0, 0.2);
+            /*4px 4px 0px #ef0a9b,*/
+            7px 7px 0px white;
 }

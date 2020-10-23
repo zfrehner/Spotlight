@@ -17,7 +17,9 @@
     <h1>Thank you for checking in with<a id="cool"> Spotlight!</a></h1>
     <h3>You are now checked in at your gym!</h3>
     <img id="logo" src="images/spotlightLogo.png" alt="logo">
-    <a href="https://jonlaygo.greenriverdev.com/355/Spotlight/index.php" >Return to homepage</a>
+    <a href="https://jonlaygo.greenriverdev.com/355/Spotlight/index.php" >
+        <button id="btn-subscribe" type="submit" class="btn btn-warning">Return to Home</button>
+    </a>
 </div>
 
 <pre>
@@ -121,7 +123,7 @@ if ($result) {
     echo "TESTING: DATA SUCCESSFULLY ADDED!";
 }
 
-var_dump($_POST);
+//var_dump($_POST);
 
 
 ?>

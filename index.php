@@ -41,8 +41,8 @@
         <div class="collapse navbar-collapse" id="myTogglerNav"><!-- navbar collapsing menu-->
             <div class="navbar-nav">
                 <a class="nav-item nav-link active"
-                   href="#about"
-                   data-toggle="collapse"
+                   href="#bench"
+
                    aria-expanded="true"
                    aria-controls="about">ABOUT</a><!-- navlink about-->
 
@@ -65,18 +65,19 @@
 
             </div> <!-- navbar nav-->
         </div> <!-- collapse-->
-        <h4>It's time to be someone at the gym!</h4>
+        <h4><em>It's time to be someone at the gym!</em></h4>
     </div> <!--nav container -->
 </nav> <!-- overall nav -->
 
-<div class="container-sm ">
+<div class="container-sm">
 
-    <div class="card hidden-md-down text-center rounded-0 bg-warning d-none d-md-block">
+    <div class="container"><!--card hidden-md-down text-center rounded-0 bg-warning d-none d-md-block-->
 
         <div class="row"><!--starting row-->
             <div class="col-md-6 ">
                 <div class="card-body">
                     <div class="card-title display-2 img-fluid">
+                        <h1>SPOTLIGHT</h1>
                         <img src="images/spotlightLogo.png" alt="logo"><!--image by carousel-->
                     </div>
                 </div>
@@ -135,7 +136,7 @@
         </div><!-- closing row-->
     </div>
 
-    <section class="accordion border-0" id="accordion"> <!-- overall accordion -->
+    <!--<section class="accordion border-0" id="accordion">--> <!-- overall accordion -->
 
         <div class="card border-bottom"><!-- 1st card begins-->
             <div class="card-header" id="aboutHeading"><!-- card header begins --> <!-- default aria-expanded="true" -->
@@ -156,7 +157,7 @@
                 <div class="card-body text-wrap bg-dark border-0"><!-- card body content begins-->
 
                     <figure class="figure float-right bg-dark"><!--figure starts-->
-                        <img class="figure-img img-fluid rounded-circle" src="images/gym.jpg" alt="sample2">
+                        <img class="figure-img img-fluid rounded-circle" src="images/gym.jpg" alt="sample2" id="bench">
 
                     </figure><!--figure ends-->
                     <br>
@@ -204,6 +205,29 @@
                             <div class="card-body">
                                 <h5 class="card-title">Roxy's Fitness for All - 31446 52nd Ave S</h5>
                                 <div class="card-text">
+                                    <!--gym 1 display-->
+                                    <div class="col-sm">
+                                        <label for="gym1">Roxy's Fitness for All - 31446 52nd Ave S</label>
+                                        <div class="overflow-auto" id="gym1">
+                                            <?php
+                                            $sql1 = "SELECT * FROM gym1 ";
+                                            $result1 = mysqli_query($cnxn, $sql1);
+                                            if (mysqli_num_rows($result1) > 0) {
+                                                while ($row = mysqli_fetch_assoc($result1)) {
+                                                    echo "<p>";
+                                                    echo $row['first']." ".$row['last'].", (".$row['gender'].") ".$row['age']." ";
+                                                    echo "<br>";
+                                                    echo $row['city']. ", ". $row['state']." [";
+                                                    echo $row['comment']."] ";
+                                                    echo "</p>";
+                                                }
+                                            } else {
+                                                echo "The data table will display here";
+                                            }
+                                            ?>
+
+                                        </div>
+                                    </div>
 
                                 </div>
                                 <p class="card-text"><small class="text-muted">Last updated 10/19/2020</small></p>
@@ -215,6 +239,28 @@
                             <div class="card-body">
                                 <h5 class="card-title">LA Fitness - 1347 Auburn Way N · Auburn North</h5>
                                 <br>
+                                <!--gym 2 display-->
+                                <div class="col-sm">
+                                    <label for="gym2">LA Fitness - 1347 Auburn Way N · Auburn North</label>
+                                    <div class="overflow-auto" id="gym2">
+                                        <?php
+                                        $sql2 = "SELECT * FROM gym2 ";
+                                        $result2 = mysqli_query($cnxn, $sql2);
+                                        if (mysqli_num_rows($result2) > 0) {
+                                            while ($row = mysqli_fetch_assoc($result2)) {
+                                                echo "<p>";
+                                                echo $row['first']." ".$row['last'].", (".$row['gender'].") ".$row['age']." ";
+                                                echo "<br>";
+                                                echo $row['city']. ", ". $row['state']." [";
+                                                echo $row['comment']."] ";
+                                                echo "</p>";
+                                            }
+                                        } else {
+                                            echo "The data table will display here.";
+                                        }
+                                        ?>
+                                    </div>
+                                </div>
 
                                 <p class="card-text"><small class="text-muted">Last updated 10/19/2020</small></p>
                             </div>
@@ -223,84 +269,35 @@
                             <div class="card-body">
                                 <h5 class="card-title">Peak MMA & Fitness LLC - 328 37th St NW suite A</h5>
                                 <br>
+                                <!--gym 3 display-->
+                                <div class="col-sm">
+                                    <label for="gym3">Peak MMA & Fitness LLC - 328 37th St NW suite A</label>
+                                    <div class="overflow-auto" id="gym3">
+                                        <?php
+                                        $sql3 = "SELECT * FROM gym3 ";
+                                        $result3 = mysqli_query($cnxn, $sql3);
+                                        if (mysqli_num_rows($result3) > 0) {
+                                            while ($row = mysqli_fetch_assoc($result3)) {
+                                                echo "<p>";
+                                                echo $row['first']." ".$row['last'].", (".$row['gender'].") ".$row['age']." ";
+                                                echo "<br>";
+                                                echo $row['city']. ", ". $row['state']." [";
+                                                echo $row['comment']."] ";
+                                                echo "</p>";
+                                            }
+                                        } else {
+                                            echo "The data table will display here.";
+                                        }
+                                        ?>
+                                    </div>
+                                </div>
 
                                 <p class="card-text"><small class="text-muted">Last updated 10/19/2020</small></p>
                             </div>
                         </div>
                     </div><!-- cards ends here -->
-                    <div class="row">
-                        <!--gym 1 display-->
-                        <div class="col-sm">
-                            <label for="gym1">Gym1</label>
-                            <div class="overflow-auto" id="gym1">
-                                <?php
-                                $sql1 = "SELECT * FROM gym1 ";
-                                $result1 = mysqli_query($cnxn, $sql1);
-                                if (mysqli_num_rows($result1) > 0) {
-                                    while ($row = mysqli_fetch_assoc($result1)) {
-                                        echo "<p>";
-                                        echo $row['first']." ".$row['last'].", (".$row['gender'].") ".$row['age']." ";
-                                        echo "<br>";
-                                        echo $row['city']. ", ". $row['state']." [";
-                                        echo $row['comment']."] ";
-                                        echo "</p>";
-                                    }
-                                } else {
-                                    echo "No one has checked in";
-                                }
-                                ?>
-
-                            </div>
-                        </div>
-
-                        <!--gym 2 display-->
-                        <div class="col-sm">
-                            <label for="gym2">Gym2</label>
-                            <div class="overflow-auto" id="gym2">
-                                <?php
-                                $sql2 = "SELECT * FROM gym2 ";
-                                $result2 = mysqli_query($cnxn, $sql2);
-                                if (mysqli_num_rows($result2) > 0) {
-                                    while ($row = mysqli_fetch_assoc($result2)) {
-                                        echo "<p>";
-                                        echo $row['first']." ".$row['last'].", (".$row['gender'].") ".$row['age']." ";
-                                        echo "<br>";
-                                        echo $row['city']. ", ". $row['state']." [";
-                                        echo $row['comment']."] ";
-                                        echo "</p>";
-                                    }
-                                } else {
-                                    echo "No one has checked in";
-                                }
-                                ?>
-                            </div>
-                        </div>
-
-                        <!--gym 3 display-->
-                        <div class="col-sm">
-                            <label for="gym3">Gym3</label>
-                            <div class="overflow-auto" id="gym3">
-                                <?php
-                                $sql3 = "SELECT * FROM gym3 ";
-                                $result3 = mysqli_query($cnxn, $sql3);
-                                if (mysqli_num_rows($result3) > 0) {
-                                    while ($row = mysqli_fetch_assoc($result3)) {
-                                        echo "<p>";
-                                        echo $row['first']." ".$row['last'].", (".$row['gender'].") ".$row['age']." ";
-                                        echo "<br>";
-                                        echo $row['city']. ", ". $row['state']." [";
-                                        echo $row['comment']."] ";
-                                        echo "</p>";
-                                    }
-                                } else {
-                                    echo "No one has checked in";
-                                }
-                                ?>
-                            </div>
-                        </div>
-                    </div>
                     <br>
-                    <button id="refresh">Refresh</button>
+                    <button id="refresh">See Who's at the Gym!</button>
 
                 </div><!-- card body content ends-->
             </div><!-- card collapse -->
@@ -409,7 +406,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    <!--</section>-->
     <br>
     <hr>
 </div><!-- content container -->
@@ -418,27 +415,28 @@
 <footer class="page-footer font-small cyan darken-3">
 
 
-    <div class="col-md-6 pr-5">
-        <!--Linkedin -->
+  <!--<div class="col-md-6 pr-5">
+
         <a class="li-ic" href="https://www.linkedin.com/">
             <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
         </a>
 
-        <!--Instagram-->
+
         <a class="ins-ic" href="https://www.instagram.com/">
             <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
         </a>
 
-        <!--email-->
+
         <a class="ins-ic" href="#">
             <i class="fas fa-envelope-square fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
         </a><br>
-    </div>
+    </div>-->
     <!-- Footer Elements -->
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="#">SPOTLIGHT - It's time to be someone at the gym!</a>
+        <p>SPOTLIGHT</p>
+        <p>It's time to be someone at the gym!</p>
     </div>
     <!-- Copyright -->
     <!--footer template from MDBootstrap.com -->
@@ -453,7 +451,9 @@
 <script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> <!--bootstrap component-->
 <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script> <!--data tables component-->
 <script src="https://kit.fontawesome.com/adf6e350ab.js" crossorigin="anonymous"></script>
-
+<!--<script>
+    $('#').DataTable();
+</script>-->
 <script src="script/validation.js"></script>
 </body>
 </html>
