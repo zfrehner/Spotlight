@@ -10,7 +10,6 @@ if (mysqli_num_rows($result1) > 0) {
         echo "<p>";
         echo $row['first']." ".$row['last'].", (".$row['gender'].") ".$row['age']." ";
         echo "<br>";
-        echo $row['city']. ", ". $row['state']." [";
         echo $row['comment']."] ";
         echo "</p>";
     }

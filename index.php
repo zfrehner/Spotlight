@@ -219,7 +219,6 @@
                                                     echo "<p>";
                                                     echo $row['first']." ".$row['last'].", (".$row['gender'].") ".$row['age']." ";
                                                     echo "<br>";
-                                                    echo $row['city']. ", ". $row['state']." [";
                                                     echo $row['comment']."] ";
                                                     echo "</p>";
                                                 }
@@ -253,7 +252,6 @@
                                                 echo "<p>";
                                                 echo $row['first']." ".$row['last'].", (".$row['gender'].") ".$row['age']." ";
                                                 echo "<br>";
-                                                echo $row['city']. ", ". $row['state']." [";
                                                 echo $row['comment']."] ";
                                                 echo "</p>";
                                             }
@@ -283,7 +281,6 @@
                                                 echo "<p>";
                                                 echo $row['first']." ".$row['last'].", (".$row['gender'].") ".$row['age']." ";
                                                 echo "<br>";
-                                                echo $row['city']. ", ". $row['state']." [";
                                                 echo $row['comment']."] ";
                                                 echo "</p>";
                                             }
