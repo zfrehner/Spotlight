@@ -2,7 +2,7 @@
 //Connect to db
 require('/home/jonlaygo/db.php');
 ?>
-<table id="gym1-table">
+<table class="table" id="gym1-table">
     <thead>
     <tr>
         <th>Name</th>

@@ -220,7 +220,7 @@ require('/home/jonlaygo/db.php');
                                         <!--<label for="gym1">Roxy's Fitness for All - 31446 52nd Ave S</label>-->
                                         <div class="" id="gym1">
                                             <!--This is the div for the table to display into-->
-                                            <table id="gym1-table">
+                                            <table class="table" id="gym1-table">
                                                 <thead>
                                                 <tr>
                                                     <th>Name</th>
@@ -273,7 +273,7 @@ require('/home/jonlaygo/db.php');
                                     <!--<label for="gym2">LA Fitness - 1347 Auburn Way N · Auburn North</label>-->
                                     <div class="overflow-auto" id="gym2">
                                         <!--This is the div for the table to display into-->
-                                        <table id="gym2-table">
+                                        <table class="table" id="gym2-table">
                                             <thead>
                                             <tr>
                                                 <th>Name</th>
@@ -323,7 +323,7 @@ require('/home/jonlaygo/db.php');
                                     <!--<label for="gym3">Peak MMA & Fitness LLC - 328 37th St NW suite A</label>-->
                                     <div class="overflow-auto" id="gym3">
                                         <!--This is the div for the table to display into-->
-                                        <table id="gym3-table">
+                                        <table class="table" id="gym3-table">
                                             <thead>
                                             <tr>
                                                 <th>Name</th>
