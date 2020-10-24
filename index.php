@@ -6,7 +6,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 //Connect to db
-require('/home/jonlaygo/db.php');
+require('db.php');
 ?>
 
 <!doctype html>
@@ -367,7 +367,7 @@ require('/home/jonlaygo/db.php');
                     </div><!-- cards ends here -->
 
                     <br>
-                    <button id="refresh">See Who's at the Gym!</button>
+                    <button id="refresh">Refresh</button>
 
                 </div><!-- card body content ends-->
             </div><!-- card collapse -->

@@ -1,6 +1,6 @@
 <?php
 //Connect to db
-require('/home/jonlaygo/db.php');
+require('db.php');
 ?>
 <table class="table" id="gym2-table">
     <thead>

@@ -17,7 +17,7 @@
     <h1>Thank you for checking in with<a id="cool"> Spotlight!</a></h1>
     <h3>You are now checked in at your gym!</h3>
     <img id="logo" src="images/spotlightLogo.png" alt="logo">
-    <a href="https://jonlaygo.greenriverdev.com/355/Spotlight/index.php" >
+    <a href="https://nullpointerexception.greenriverdev.com/Spotlight/index.php" >
         <button id="btn-subscribe" type="submit" class="btn btn-warning">Return to Home</button>
     </a>
 </div>
@@ -31,7 +31,7 @@ error_reporting(E_ALL);
 require('validateFunctions.php'); //requires the validation file to be used
 
 //Connect to db
-require('/home/jonlaygo/db.php');
+require('db.php');
 
 $isValid = true; // setting up a new variable and initializing it to true
 
