@@ -1,3 +1,14 @@
+<?php
+/** Display page: shows who is checked in or not checked in ..., ..., ..., */
+
+//Turn on error reporting -- this is critical!
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+//Connect to db
+require('/home/jonlaygo/db.php');
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,7 +24,7 @@
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
             crossorigin="anonymous">
     </script> <!--jquery component-->
-    <script src="script/jqueryAjax.js"></script>
+
 
     <link rel="icon" type="image/png" href="images/spotlightLogo.png">
     <title>Spotlight</title>
@@ -209,6 +220,41 @@
                                         <!--<label for="gym1">Roxy's Fitness for All - 31446 52nd Ave S</label>-->
                                         <div class="" id="gym1">
                                             <!--This is the div for the table to display into-->
+                                            <table id="gym1-table">
+                                                <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Gender</th>
+                                                    <th>Age</th>
+                                                    <th>Workout</th>
+                                                </tr>
+                                                </thead>
+
+                                                <?php
+                                                $sql1 = "SELECT * FROM gym1 ";
+                                                $result1 = mysqli_query($cnxn, $sql1);
+                                                if (mysqli_num_rows($result1) > 0) {
+                                                    //process the result
+                                                    foreach ($result1 as $row) {
+                                                        //var_dump($row);
+                                                        $first = $row['first'];
+                                                        $last = $row['last'];
+                                                        $gender = $row['gender'];
+                                                        $age = $row['age'];
+                                                        $comment = $row['comment'];
+
+                                                        echo "<tr>            
+                                                        <td>$first $last</td>
+                                                        <td>$gender</td>
+                                                        <td>$age</td>
+                                                        <td>$comment</td>
+                                                        </tr>";
+                                                    }
+                                                } else {
+                                                    echo "The data table will display here";
+                                                }
+                                                ?>
+                                            </table>
                                         </div>
                                     </div>
 
@@ -216,8 +262,6 @@
                                 <p class="card-text"><small class="text-muted">Last updated 10/19/2020</small></p>
                             </div>
                        <!-- </div>--><!-- card one ends here -->
-
-
 
                         <!--<div class="card">--><!-- card two starts here -->
                             <img class="card-img-top" src="images/gym5.jpg" alt="sample3">
@@ -229,14 +273,46 @@
                                     <!--<label for="gym2">LA Fitness - 1347 Auburn Way N · Auburn North</label>-->
                                     <div class="overflow-auto" id="gym2">
                                         <!--This is the div for the table to display into-->
+                                        <table id="gym2-table">
+                                            <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Gender</th>
+                                                <th>Age</th>
+                                                <th>Workout</th>
+                                            </tr>
+                                            </thead>
+
+                                            <?php
+                                            $sql2 = "SELECT * FROM gym2 ";
+                                            $result2 = mysqli_query($cnxn, $sql2);
+                                            if (mysqli_num_rows($result2) > 0) {
+                                                //process the result
+                                                foreach ($result2 as $row) {
+                                                    //var_dump($row);
+                                                    $first = $row['first'];
+                                                    $last = $row['last'];
+                                                    $gender = $row['gender'];
+                                                    $age = $row['age'];
+                                                    $comment = $row['comment'];
+
+                                                    echo "<tr>            
+                                                    <td>$first $last</td>
+                                                    <td>$gender</td>
+                                                    <td>$age</td>
+                                                    <td>$comment</td>
+                                                    </tr>";
+                                                }
+                                            } else {
+                                                echo "The data table will display here";
+                                            }
+                                            ?>
+                                        </table>
                                     </div>
                                 </div>
 
                                 <p class="card-text"><small class="text-muted">Last updated 10/19/2020</small></p>
                             </div>
-
-
-
 
                             <img class="card-img-top" src="images/gym6.jpg" alt="sample3" id="img6">
                             <div class="card-body">
@@ -247,6 +323,41 @@
                                     <!--<label for="gym3">Peak MMA & Fitness LLC - 328 37th St NW suite A</label>-->
                                     <div class="overflow-auto" id="gym3">
                                         <!--This is the div for the table to display into-->
+                                        <table id="gym3-table">
+                                            <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Gender</th>
+                                                <th>Age</th>
+                                                <th>Workout</th>
+                                            </tr>
+                                            </thead>
+
+                                            <?php
+                                            $sql3 = "SELECT * FROM gym3 ";
+                                            $result3 = mysqli_query($cnxn, $sql3);
+                                            if (mysqli_num_rows($result3) > 0) {
+                                                //process the result
+                                                foreach ($result3 as $row) {
+                                                    //var_dump($row);
+                                                    $first = $row['first'];
+                                                    $last = $row['last'];
+                                                    $gender = $row['gender'];
+                                                    $age = $row['age'];
+                                                    $comment = $row['comment'];
+
+                                                    echo "<tr>            
+                                                    <td>$first $last</td>
+                                                    <td>$gender</td>
+                                                    <td>$age</td>
+                                                    <td>$comment</td>
+                                                    </tr>";
+                                                }
+                                            } else {
+                                                echo "The data table will display here";
+                                            }
+                                            ?>
+                                        </table>
                                     </div>
                                 </div>
 
@@ -410,8 +521,15 @@
 <script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> <!--bootstrap component-->
 <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script> <!--data tables component-->
 <script src="https://kit.fontawesome.com/adf6e350ab.js" crossorigin="anonymous"></script>
+<script src="script/jqueryAjax.js"></script>
 <script>
     $('#gym1-table').DataTable();
+</script>
+<script>
+    $('#gym2-table').DataTable();
+</script>
+<script>
+    $('#gym3-table').DataTable();
 </script>
 <script src="script/validation.js"></script>
 </body>
