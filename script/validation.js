@@ -8,7 +8,7 @@ function validate(e) {
     let validGym = validateSelectList("gym", "errGym")
     /*let validInput = validFName && validLName && validOrg && validTitle &&
         validEmail && validSymbols && validIndustry && validTerms && validServices && validHear;*/
-    let validInput = validFName && validLName && validAge;
+    let validInput = validFName && validLName && validAge && validGender && validGym;
 
     if(validInput === false) {
         e.preventDefault();
