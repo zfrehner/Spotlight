@@ -260,7 +260,7 @@ require('db.php');
                                 </div>
 
                             </div>
-                            <p class="card-text"><small class="text-muted">Last updated 10/19/2020</small></p>
+                            <p class="card-text"><small class="text-muted">Last updated 10/26/2020</small></p>
                         </div>
                         <!-- </div>--><!-- card one ends here -->
 
@@ -312,7 +312,7 @@ require('db.php');
                                 </div>
                             </div>
 
-                            <p class="card-text"><small class="text-muted">Last updated 10/19/2020</small></p>
+                            <p class="card-text"><small class="text-muted">Last updated 10/26/2020</small></p>
                         </div>
 
                         <img class="card-img-top" src="images/gym6.jpg" alt="sample3" id="img6">
@@ -362,7 +362,7 @@ require('db.php');
                                 </div>
                             </div>
 
-                            <p class="card-text"><small class="text-muted">Last updated 10/19/2020</small></p>
+                            <p class="card-text"><small class="text-muted">Last updated 10/26/2020</small></p>
                         </div>
                     </div>
                 </div><!-- cards ends here -->
